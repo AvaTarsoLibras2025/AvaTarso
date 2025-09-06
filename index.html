@@ -1,1 +1,39 @@
 <!--PÁGINA INICIAL-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <div class="logo">AvaTarso</div>
+        <nav>
+            <li>Página Inicial</li>
+            <li>Calculadora</li>
+            <li>Sobre</li>
+            <button class="botao-aprender">Aprender</button>
+        </nav>
+    </header>
+    
+    
+    
+    <!--Botão VLibras -->
+    <button id="meu-botao-libras">Traduzir em Libras</button>
+
+    <!--Código do widget antes de fechar o body -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="<your-directory-path>/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget();
+    </script>
+</body>
+</html>
