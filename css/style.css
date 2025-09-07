@@ -1,1 +1,45 @@
 /*ESTILOS PRINCIPAIS DO SITE*/
+/*cabeçalho*/
+
+header{
+        position: fixed;
+        width: 90vw;
+        top: 0;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3;
+}
+.logo {
+    font-family: "Orbitron", sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #00f7ff;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    gap: 48px;
+}
+
+header nav ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+}
+
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00f7ff;
+    transition: width 0.2s ease;
+}
+header nav ul li:hover::after{
+    width: 100%;
+}
