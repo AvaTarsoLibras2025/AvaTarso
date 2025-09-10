@@ -35,7 +35,7 @@ Clique na issue desejada
 
 No lado direito → "Assignees" → "Assign yourself"
 
-Mova no Project Board para "⏳ In Progress"
+Mova no Project Board para " In Progress"
 
 # TRABALHANDO NO CÓDIGO
 Etapas que você deve fazer **SEMPRE** que for implementar alguma modificação no Repositório local de sua máquina.
