@@ -1,45 +1,217 @@
 /*ESTILOS PRINCIPAIS DO SITE*/
 /*cabeçalho*/
 
-header{
-        position: fixed;
-        width: 90vw;
-        top: 0;
-        padding: 20px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 3;
-}
-.logo {
-    font-family: "Orbitron", sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    color: #00f7ff;
-    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header nav ul {
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-bg{
+    background-color: #FF6B35;   
+}
+
+.header {
     display: flex;
-    gap: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header nav ul li {
+.logo img {
+    height: 50px; 
+    width: auto; 
+    border-radius: 5px;
+}
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu li{
+    margin-left: 20px;
+}
+
+.header-menu a{
+    padding: 16px 0px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* botão APRENDER para uso geral*/
+.botao-aprender {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #FF6B35;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid #FF6B35;
     cursor: pointer;
-    position: relative;
-    padding: 5px 0;
 }
 
-header nav ul li::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #00f7ff;
-    transition: width 0.2s ease;
+.botao-aprender:hover {
+    background: #FF6B35;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
 }
-header nav ul li:hover::after{
-    width: 100%;
+
+/*ESTILOS PARA MOBILE*/
+
+@media(max-width: 800px){
+    .header-menu{
+        gap: 20px;
+    }
+    .header-menu a{
+        background: #1111;
+        padding: 12px 16px;
+        border-radius: 4px;
+    }
+    .header-menu a:hover{
+        background-color: #ffffff;
+    }
+}
+@media(max-width: 600px){
+    .header-menu{
+        gap: 12px; 
+    }
+    .header-menu a{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/*ESTILIZANDO O CONTEÚDO DA PÁGINA PRINCIPAL*/
+
+.introducao-bg{
+    background: #ffffff;
+}
+h1, ul, p{
+    margin: 0px;
+}
+
+.introducao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 40px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.introducao-conteudo{
+    align-self: end;
+    padding-bottom: 80px;
+}
+
+.introducao h1{
+    margin-bottom: 32px;
+    font-size: 64px;
+    line-height: 1.125;
+}
+
+.introducao p{
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #B2B2B2;
+}
+
+.introducao img{
+    border-radius: 20px;
+}
+
+
+/*FOOTER*/
+.footer-bg {
+    background-color: #FF6B35; 
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px; 
+    width: auto;
+    border-radius: 5px; 
+}
+
+/*redes Sociais a direita*/
+.footer-social-media {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    color: #FF6B35;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.footer-link i {
+    font-size: 20px;
+}
+
+/* footer responsivo */
+@media (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        height: 45px;
+    }
 }
