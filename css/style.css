@@ -339,4 +339,89 @@ section p {
     }
 }
 
-/*ESTILIZANDO A PÁGINA SOBRE*/
+/*estilos página sobre*/
+.sobre-bg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/*conteiner base*/
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    min-height: 400px;
+}
+
+/*conteúdo de texto*/
+.sobre-conteudo {
+    flex: 1;
+}
+
+.titulos-sobre {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.texto-sobre {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/*imagens*/
+.sobre-imagem {
+    flex: 0 0 400px;
+    max-width: 400px;
+    height: 300px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*layout p cada direção */
+.sobre-esquerda .sobre-imagem {
+    order: -1;
+}
+
+.sobre-direita .sobre-imagem {
+    order: 1;
+}
+
+/*responsividade*/
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .sobre-imagem {
+        flex: none;
+        max-width: 100%;
+        height: 250px;
+    }
+    
+    .titulos-sobre {
+        font-size: 1.5rem;
+    }
+    
+    .texto-sobre {
+        text-align: center;
+    }
+    
+    .sobre-esquerda .sobre-imagem,
+    .sobre-direita .sobre-imagem {
+        order: 0;
+    }
+}
