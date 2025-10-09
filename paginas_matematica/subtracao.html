@@ -18,7 +18,7 @@
         <div class="header">
             <div class="logo">
                 <a href="./index.html">
-                    <img src="./assets/imagens/Logo Tarso de Coimbra.jpg" alt="AvaTarso" width="150">
+                    <img src="/assets/imagens/Logo Tarso de Coimbra.jpg" alt="AvaTarso" width="150">
                 </a>
             </div>
             <nav aria-label="primaria">
@@ -38,7 +38,7 @@
     
     <br>
     <p>Subtração é quando a gente tira alguma coisa.
-É o contrário da adição (soma). Como por exemplo, <b> 5 - 3 = 2.</b></p>
+    É o contrário da adição (soma). Como por exemplo, <b> 5 - 3 = 2.</b></p>
     
     <h1>Exemplos</h1>
     <hr>
@@ -46,30 +46,30 @@
     <br>
     <p><b>Exemplo 1</b></p>
     <p>Você tem <b>R$10,00</b>, você decide comprar um sorvete por <b>R$4,00</b>. Quanto dinheiro sobra para você?</p>
-     <img src="img/10 reais.jpg" width ="200px">
-     <img src="img/menos.png" width ="50px" height="120px">
-     <img src="img/2 reais.jpg" width ="200px">
-     <img src="img/2 reais.jpg" width ="200px">
-     <img src="img/igual.jpg" width ="100px">
-     <img src="img/5 reais.jpg" width ="200px">
-     <img src="img/mais.jpg" width ="70px">
-     <img src="img/moeda.jpg" width ="100px">
+     <img src="/assets/imagens/10 reais.jpg" width ="200px">
+     <img src="/assets/imagens/menos.png" width ="50px" height="120px">
+     <img src="/assets/imagens/2 reais.jpg" width ="200px">
+     <img src="/assets/imagens/2 reais.jpg" width ="200px">
+     <img src="/assets/imagens/igual.jpg" width ="100px">
+     <img src="/assets/imagens/5 reais.jpg" width ="200px">
+     <img src="/assets/imagens/mais.jpg" width ="70px">
+     <img src="/assets/imagens/moeda.jpg" width ="100px">
 
      <p>Sobrará <b>R$5,00</b> e <b>R$1,00</b>, ou seja, <b>R$6,00</b>!</p>
      <br>
      <p><b>Exemplo 2</b></p>
 
      <p>Você tem <b>R$20,00</b> e compra um caderno de <b>R$7,00</b>. Quanto você ainda tem?</p>
-     <img src="img/20 reais.jpg" width ="200px">
-     <img src="img/menos.png" width ="50px" height="120px">
+     <img src="/assets/imagens/20 reais.jpg" width ="200px">
+     <img src="/assets/imagens/menos.png" width ="50px" height="120px">
      <img src="img/5 reais.jpg" width ="200px">
      <img src="img/2 reais.jpg" width ="200px">
-     <img src="img/igual.jpg" width ="100px">
+     <img src="/assets/imagens/igual.jpg" width ="100px">
      <img src="img/10 reais.jpg" width ="200px">
-     <img src="img/mais.jpg" width ="70px">
-     <img src="img/2 reais.jpg" width ="200px">
-     <img src="img/mais.jpg" width ="70px">
-     <img src="img/moeda.jpg" width ="100px">
+     <img src="/assets/imagens/mais.jpg" width ="70px">
+     <img src="/assets/imagens/2 reais.jpg" width ="200px">
+     <img src="/assets/imagens/mais.jpg" width ="70px">
+     <img src="/assets/imagens/moeda.jpg" width ="100px">
 
      <p>Você ainda tem <b>R$13,00</b>!</p>
 
@@ -77,14 +77,14 @@
     <p><b>Exemplo 3</b></p>
 
     <p>Você tem uma nota de <b>R$200,00</b>, decide comprar uma blusa de <b>R$80,00</b>. Quanto sobra para você?</p>
-    <img src="img/200 reais.jpg" width ="200px">
-    <img src="img/menos.png" width ="50px" height="120px">
-    <img src="img/50 reais.jpg" width ="200px">
-    <img src="img/20 reais.jpg" width ="200px">
-    <img src="img/10 reais.jpg" width ="200px">
-    <img src="img/igual.jpg" width ="100px">
-    <img src="img/100 reais.jpg" width ="200px">
-    <img src="img/20 reais.jpg" width ="200px">
+    <img src="/assets/imagens/200 reais.jpg" width ="200px">
+    <img src="/assets/imagens/menos.png" width ="50px" height="120px">
+    <img src="/assets/imagens/50 reais.jpg" width ="200px">
+    <img src="/assets/imagens/20 reais.jpg" width ="200px">
+    <img src="/assets/imagens/10 reais.jpg" width ="200px">
+    <img src="/assets/imagens/igual.jpg" width ="100px">
+    <img src="/assets/imagens/100 reais.jpg" width ="200px">
+    <img src="/assets/imagens/20 reais.jpg" width ="200px">
 
     <p>Você ainda fica com <b>R$130,00</b>!</p>
     
@@ -158,13 +158,25 @@
     
     <script src="js\navegacao.js"></script>
 
-     <!--<p>Para ir ao próximo módulo <a href="Adição.html"> Clique aqui! </a></p>-->
-    
+    <!--<p>Para ir ao próximo módulo <a href="Adição.html"> Clique aqui! </a></p>-->
+    <!--VLibras widget-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <!--script vlibras via cdn-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <!-- footer responsivo -->
     <footer class="footer-bg">
         <div class="footer">
             <div class="footer-logo">
-                <img src="./assets/imagens/Logo Tarso de Coimbra.jpg" alt="AvaTarso" width="150">
+                <img src="/assets/imagens/Logo Tarso de Coimbra.jpg" alt="AvaTarso" width="150">
             </div>
             <div class="footer-social-media">
                 <a href="https://github.com/AvaTarsoLibras2025/AvaTarso" class="footer-link" target="_blank" id="Github">
