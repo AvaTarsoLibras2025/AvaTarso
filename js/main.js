@@ -1,1 +1,2 @@
-//Script Principal
+//Script principal
+

@@ -3,24 +3,75 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #333;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .fundo-branco {
   background-color: #fff;
   padding: 40px;
   border-radius: 15px;
-  margin-top: 30px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-p {
+/* Título centralizado */
+.titulo-centralizado {
+  text-align: center;
+}
+
+.titulo-centralizado h1 {
+  text-align: center;
+}
+
+/* Conteúdo centralizado */
+.conteudo-centralizado {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.conteudo-centralizado p,
+.conteudo-centralizado ul,
+.conteudo-centralizado h2,
+.conteudo-centralizado h3,
+.conteudo-centralizado h4 {
+  text-align: center;
+}
+
+.conteudo-centralizado ul {
+  display: inline-block;
   text-align: left;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4 {
   color: #ff7f50;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-  text-align: left;
   font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-top: 25px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-top: 30px;
+  border-top: 2px solid #ff7f50;
+  padding-top: 15px;
+}
+
+p {
+  font-size: 18px;
+  margin: 15px 0;
 }
 
 button {
@@ -33,14 +84,16 @@ button {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: transform 0.2s, box-shadow 0.2s;
+  margin-left: 10px;
 }
 
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+  background-color: #ff6b3d;
 }
 
-input, textarea {
+input {
   width: 300px;
   padding: 10px 15px;
   border: 2px solid #ccc;
@@ -50,15 +103,128 @@ input, textarea {
   transition: border 0.3s, box-shadow 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus {
   border-color: #ff7f50;
   box-shadow: 0 4px 8px rgba(255,127,80,0.3);
   outline: none;
 }
 
-.direita {
-  margin-left: 880px
- 
+/* Estilo para os exercícios */
+.exercicio {
+  margin: 25px 0;
+  padding: 20px;
+  border: 2px solid #ff7f50;
+  border-radius: 10px;
+  background-color: #fffaf7;
 }
 
+/* Botão do próximo módulo */
+.proximo-modulo {
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
 
+.botao-proximo {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.botao-proximo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+  background-color: #ff6b3d;
+  color: white;
+}
+
+/* Header styles */
+.header-bg {
+  background-color: #FF6B35;
+  padding: 15px 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu a {
+  padding: 16px 0px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Botão Aprender*/
+.botao-aprender a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #FF6B35;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #FF6B35;
+  cursor: pointer;
+}
+
+.botao-aprender a:hover {
+  background: #FF6B35;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
+}
+
+/* Footer styles */
+.footer-bg {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-link {
+  color: white;
+  font-size: 24px;
+}

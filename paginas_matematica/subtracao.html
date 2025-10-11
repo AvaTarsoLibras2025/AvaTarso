@@ -1,18 +1,15 @@
-
-     <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matemática Básica</title>
+    <title>Subtração - Matemática Básica</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/paginas_matematica.css"> <!--css da estilização da página de mátemática-->
-    <link rel="stylesheet" href="/css/style.css"> <!--css do header e footer-->
+    <link rel="stylesheet" href="/css/paginas_matematica.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <!--header-->
+<body data-pagina="subtracao">
     <!--cabeçalho-->
     <header class="header-bg">
         <div class="header">
@@ -33,145 +30,178 @@
     </header>
 
     <div class="fundo-branco">
-    <h1>Subtração</h1>
-    <hr>
-    
-    <br>
-    <p>Subtração é quando a gente tira alguma coisa.
-    É o contrário da adição (soma). Como por exemplo, <b> 5 - 3 = 2.</b></p>
-    
-    <h1>Exemplos</h1>
-    <hr>
-    
-    <br>
-    <p><b>Exemplo 1</b></p>
-    <p>Você tem <b>R$10,00</b>, você decide comprar um sorvete por <b>R$4,00</b>. Quanto dinheiro sobra para você?</p>
-     <img src="/assets/imagens/10 reais.jpg" width ="200px">
-     <img src="/assets/imagens/menos.png" width ="50px" height="120px">
-     <img src="/assets/imagens/2 reais.jpg" width ="200px">
-     <img src="/assets/imagens/2 reais.jpg" width ="200px">
-     <img src="/assets/imagens/igual.jpg" width ="100px">
-     <img src="/assets/imagens/5 reais.jpg" width ="200px">
-     <img src="/assets/imagens/mais.jpg" width ="70px">
-     <img src="/assets/imagens/moeda.jpg" width ="100px">
-
-     <p>Sobrará <b>R$5,00</b> e <b>R$1,00</b>, ou seja, <b>R$6,00</b>!</p>
-     <br>
-     <p><b>Exemplo 2</b></p>
-
-     <p>Você tem <b>R$20,00</b> e compra um caderno de <b>R$7,00</b>. Quanto você ainda tem?</p>
-     <img src="/assets/imagens/20 reais.jpg" width ="200px">
-     <img src="/assets/imagens/menos.png" width ="50px" height="120px">
-     <img src="img/5 reais.jpg" width ="200px">
-     <img src="img/2 reais.jpg" width ="200px">
-     <img src="/assets/imagens/igual.jpg" width ="100px">
-     <img src="img/10 reais.jpg" width ="200px">
-     <img src="/assets/imagens/mais.jpg" width ="70px">
-     <img src="/assets/imagens/2 reais.jpg" width ="200px">
-     <img src="/assets/imagens/mais.jpg" width ="70px">
-     <img src="/assets/imagens/moeda.jpg" width ="100px">
-
-     <p>Você ainda tem <b>R$13,00</b>!</p>
-
-    <br>
-    <p><b>Exemplo 3</b></p>
-
-    <p>Você tem uma nota de <b>R$200,00</b>, decide comprar uma blusa de <b>R$80,00</b>. Quanto sobra para você?</p>
-    <img src="/assets/imagens/200 reais.jpg" width ="200px">
-    <img src="/assets/imagens/menos.png" width ="50px" height="120px">
-    <img src="/assets/imagens/50 reais.jpg" width ="200px">
-    <img src="/assets/imagens/20 reais.jpg" width ="200px">
-    <img src="/assets/imagens/10 reais.jpg" width ="200px">
-    <img src="/assets/imagens/igual.jpg" width ="100px">
-    <img src="/assets/imagens/100 reais.jpg" width ="200px">
-    <img src="/assets/imagens/20 reais.jpg" width ="200px">
-
-    <p>Você ainda fica com <b>R$130,00</b>!</p>
-    
-    
-    <h4>Exercícios</h4>
-
-    <p><b>Responda abaixo o resultado das subtrações</b></p>
-    
-    <p>10 - 5</p>
-    <input id="resposta_S0" type="text">
-    <button id="Subtracao_botao">Responder</button>
-    <p id="resultado_S0"></p>
-
-    <p>17 - 8</p>
-    <input id="resposta_S1" type="text">
-    <button id="Subtracao_botaoS1">Responder</button>
-    <p id="resultado_S1"></p>
-
-    <p>25 - 13</p>
-    <input id="resposta_S2" type="text">
-    <button id="Subtracao_botaoS2">Responder</button>
-    <p id="resultado_S2"></p>
-
-    <p>63 - 34</p>
-    <input id="resposta_S3" type="text">
-    <button id="Subtracao_botaoS3">Responder</button>
-    <p id="resultado_S3"></p>
-
-     <p>240 - 130</p>
-    <input id="resposta_S4" type="text">
-    <button id="Subtracao_botaoS4">Responder</button>
-    <p id="resultado_S4"></p>
-
-    <p>150 - 50 - 25</p>
-    <input id="resposta_S5" type="text">
-    <button id="Subtracao_botaoS5">Responder</button>
-    <p id="resultado_S5"></p>
-
-    <p>Maria foi à padaria com R$50. Ela Comprou pães por R$15 e um suco por R$10. Quanto sobrou para Maria?</p>
-    <input id="resposta_S6" type="text">
-    <button id="Subtracao_botaoS6">Responder</button>
-    <p id="resultado_S6"></p>
-
-    <p>João tinha R$100. Comprou um carrinho por R$45 e uma bola por R$20. Quanto dinheiro ele ainda tem?</p>
-    <input id="resposta_S7" type="text">
-    <button id="Subtracao_botaoS7">Responder</button>
-    <p id="resultado_S7"></p>
-
-    <p>Luísa tinha R$150. Ela comprou um perfume por R$90 para a mãe. Quanto sobrou para Luísa?</p>
-    <input id="resposta_S8" type="text">
-    <button id="Subtracao_botaoS8">Responder</button>
-    <p id="resultado_S8"></p>
-
-    <p>Carlos tinha R$50 na carteira e achou R$20 no bolso. Depois, ele comprou um lanche por R$15. Com quanto ele ficou no final?</p>
-    <input id="resposta_S9" type="text">
-    <button id="Subtracao_botaoS9">Responder</button>
-    <p id="resultado_S9"></p>
-
-    <p>Joana tinha R$250. Ela comprou uma bolsa por R$120 e um perfume por R$75. Quanto sobrou pra Joana depois das compras?</p>
-    <input id="resposta_S10" type="text">
-    <button id="Subtracao_botaoS10">Responder</button>
-    <p id="resultado_S10"></p>
-
-    <p>Lara tinha R$150. Ela foi ao shopping e comprou: Uma blusa por R$90 e um tênis por R$80. Quanto Lara ficou devendo?</p>
-    <input id="resposta_S11" type="text">
-    <button id="Subtracao_botaoS11">Responder</button>
-    <p id="resultado_S11"></p>
-
-    <p>Para ir ao próximo módulo <a href="multiplicacao.html"> Clique aqui! </a></p>
-
-    
-    <script src="js\navegacao.js"></script>
-
-    <!--<p>Para ir ao próximo módulo <a href="Adição.html"> Clique aqui! </a></p>-->
-    <!--VLibras widget-->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+        <div class="titulo-centralizado">
+            <h1>Subtração</h1>
+            <hr>
         </div>
+
+        <div class="conteudo-centralizado">
+            <p>Subtração é quando a gente tira alguma coisa. É o contrário da adição (soma). Como por exemplo, <b>5 - 3 = 2.</b></p>
+            
+            <h2>Exemplos</h2>
+            <hr>
+
+            <div class="exemplo">
+                <p><b>Exemplo 1</b></p>
+                <p>Você tem <b>R$10,00</b>, você decide comprar um sorvete por <b>R$4,00</b>. Quanto dinheiro sobra para você?</p>
+                <div class="imagens-centralizadas">
+                    <img src="/assets/imagens/10 reais.jpg" width="200px">
+                    <img src="/assets/imagens/menos.png" width="50px" height="120px">
+                    <img src="/assets/imagens/2 reais.jpg" width="200px">
+                    <img src="/assets/imagens/2 reais.jpg" width="200px">
+                    <img src="/assets/imagens/igual.jpg" width="100px">
+                    <img src="/assets/imagens/5 reais.jpg" width="200px">
+                    <img src="/assets/imagens/mais.jpg" width="70px">
+                    <img src="/assets/imagens/moeda.jpg" width="100px">
+                </div>
+                <p>Sobrará <b>R$5,00</b> e <b>R$1,00</b>, ou seja, <b>R$6,00</b>!</p>
+            </div>
+
+            <div class="exemplo">
+                <p><b>Exemplo 2</b></p>
+                <p>Você tem <b>R$20,00</b> e compra um caderno de <b>R$7,00</b>. Quanto você ainda tem?</p>
+                <div class="imagens-centralizadas">
+                    <img src="/assets/imagens/20 reais.jpg" width="200px">
+                    <img src="/assets/imagens/menos.png" width="50px" height="120px">
+                    <img src="img/5 reais.jpg" width="200px">
+                    <img src="img/2 reais.jpg" width="200px">
+                    <img src="/assets/imagens/igual.jpg" width="100px">
+                    <img src="img/10 reais.jpg" width="200px">
+                    <img src="/assets/imagens/mais.jpg" width="70px">
+                    <img src="/assets/imagens/2 reais.jpg" width="200px">
+                    <img src="/assets/imagens/mais.jpg" width="70px">
+                    <img src="/assets/imagens/moeda.jpg" width="100px">
+                </div>
+                <p>Você ainda tem <b>R$13,00</b>!</p>
+            </div>
+
+            <div class="exemplo">
+                <p><b>Exemplo 3</b></p>
+                <p>Você tem uma nota de <b>R$200,00</b>, decide comprar uma blusa de <b>R$80,00</b>. Quanto sobra para você?</p>
+                <div class="imagens-centralizadas">
+                    <img src="/assets/imagens/200 reais.jpg" width="200px">
+                    <img src="/assets/imagens/menos.png" width="50px" height="120px">
+                    <img src="/assets/imagens/50 reais.jpg" width="200px">
+                    <img src="/assets/imagens/20 reais.jpg" width="200px">
+                    <img src="/assets/imagens/10 reais.jpg" width="200px">
+                    <img src="/assets/imagens/igual.jpg" width="100px">
+                    <img src="/assets/imagens/100 reais.jpg" width="200px">
+                    <img src="/assets/imagens/20 reais.jpg" width="200px">
+                </div>
+                <p>Você ainda fica com <b>R$130,00</b>!</p>
+            </div>
+
+            <h4>Exercícios</h4>
+            <p><b>Responda abaixo o resultado das subtrações</b></p>
+            
+            <div class="exercicio">
+                <p>10 - 5</p>
+                <input id="resposta_S0" type="text">
+                <button id="Subtracao_botao">Responder</button>
+                <p id="resultado_S0"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>17 - 8</p>
+                <input id="resposta_S1" type="text">
+                <button id="Subtracao_botaoS1">Responder</button>
+                <p id="resultado_S1"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>25 - 13</p>
+                <input id="resposta_S2" type="text">
+                <button id="Subtracao_botaoS2">Responder</button>
+                <p id="resultado_S2"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>63 - 34</p>
+                <input id="resposta_S3" type="text">
+                <button id="Subtracao_botaoS3">Responder</button>
+                <p id="resultado_S3"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>240 - 130</p>
+                <input id="resposta_S4" type="text">
+                <button id="Subtracao_botaoS4">Responder</button>
+                <p id="resultado_S4"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>150 - 50 - 25</p>
+                <input id="resposta_S5" type="text">
+                <button id="Subtracao_botaoS5">Responder</button>
+                <p id="resultado_S5"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>Maria foi à padaria com R$50. Ela Comprou pães por R$15 e um suco por R$10. Quanto sobrou para Maria?</p>
+                <input id="resposta_S6" type="text">
+                <button id="Subtracao_botaoS6">Responder</button>
+                <p id="resultado_S6"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>João tinha R$100. Comprou um carrinho por R$45 e uma bola por R$20. Quanto dinheiro ele ainda tem?</p>
+                <input id="resposta_S7" type="text">
+                <button id="Subtracao_botaoS7">Responder</button>
+                <p id="resultado_S7"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>Luísa tinha R$150. Ela comprou um perfume por R$90 para a mãe. Quanto sobrou para Luísa?</p>
+                <input id="resposta_S8" type="text">
+                <button id="Subtracao_botaoS8">Responder</button>
+                <p id="resultado_S8"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>Carlos tinha R$50 na carteira e achou R$20 no bolso. Depois, ele comprou um lanche por R$15. Com quanto ele ficou no final?</p>
+                <input id="resposta_S9" type="text">
+                <button id="Subtracao_botaoS9">Responder</button>
+                <p id="resultado_S9"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>Joana tinha R$250. Ela comprou uma bolsa por R$120 e um perfume por R$75. Quanto sobrou pra Joana depois das compras?</p>
+                <input id="resposta_S10" type="text">
+                <button id="Subtracao_botaoS10">Responder</button>
+                <p id="resultado_S10"></p>
+            </div>
+
+            <div class="exercicio">
+                <p>Lara tinha R$150. Ela foi ao shopping e comprou: Uma blusa por R$90 e um tênis por R$80. Quanto Lara ficou devendo?</p>
+                <input id="resposta_S11" type="text">
+                <button id="Subtracao_botaoS11">Responder</button>
+                <p id="resultado_S11"></p>
+            </div>
+
+            <!-- Botão para próximo módulo -->
+            <div class="proximo-modulo">
+                <a href="multiplicacao.html" class="botao-proximo">Próximo Módulo: Multiplicação →</a>
+            </div>
+        </div>
+
+        <!--verifica os exercícios-->
+        <script src="/js/verifica_subtracao.js"></script>
+
+        <!--VLibras widget-->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+        <!--script vlibras via cdn-->
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </div>
 
-    <!--script vlibras via cdn-->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
     <!-- footer responsivo -->
     <footer class="footer-bg">
         <div class="footer">
