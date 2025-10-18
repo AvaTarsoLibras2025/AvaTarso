@@ -101,7 +101,7 @@ a{
     box-shadow: 0 6px 12px rgba(255, 107, 53, 0.3);
 }
 
-/*ESTILOS PARA MOBILE*/
+/*estilização para mobile*/
 
 @media(max-width: 800px){
     .header-menu{
@@ -171,7 +171,7 @@ h1, ul, p{
 }
 
 
-/*FOOTER*/
+/*footer*/
 .footer-bg {
     background-color: #FF6B35; 
     padding: 20px 0;
@@ -224,7 +224,7 @@ h1, ul, p{
     font-size: 20px;
 }
 
-/* footer responsivo */
+/*footer responsivo*/
 @media (max-width: 600px) {
     .footer {
         flex-direction: column;
@@ -237,7 +237,7 @@ h1, ul, p{
     }
 }
 
-/* SECTION OBJETIVOS */
+/*section OBJETIVOS*/
 
 section {
     max-width: 1200px;
