@@ -35,7 +35,7 @@
         <button class="button" onclick="addNumber('7')">7</button>
         <button class="button" onclick="addNumber('8')">8</button>
         <button class="button" onclick="addNumber('9')">9</button>
-        <button class="button" onclick="setOperation('/')">:</button>
+        <button class="button" onclick="setOperation('/')">÷</button>
         <br>
         <button class="button" onclick="addNumber('4')">4</button>
         <button class="button" onclick="addNumber('5')">5</button>
@@ -48,7 +48,7 @@
         <button class="button" onclick="setOperation('-')">-</button>
         <br>
         <button class="button" onclick="addNumber('0')">0</button>
-        <button class="button" onclick="addNumber('.')">,</button>
+        <button class="button" onclick="addNumber('.')">.</button>
         <button class="button" onclick="calculateResult()">=</button>
         <button class="button" onclick="setOperation('+')">+</button>
         <br><br>
@@ -56,6 +56,21 @@
         <script src="./js/calculadora.js"></script>
     </div>
     
+    <!--plugin vlibras-->
+    <!--VLibras widget-->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+
+        <!--script vlibras via cdn-->
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+
     <!-- footer responsivo -->
     <footer class="footer-bg">
         <div class="footer">
