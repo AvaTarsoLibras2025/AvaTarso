@@ -36,33 +36,64 @@
         </div>
 
         <div class="conteudo-centralizado">
-            <p>Antes de iniciarmos, precisamos entender como funciona os numeros e quais tipos de numeros existem. Iremos rever esses conceitos e depois começar a utiliza-los para <b>adição, subtração, divisão e multiplicação.</b></p>
-            
+            <p>Antes de iniciarmos, precisamos entender os Números e quais tipos de numeros existem. Iremos rever esses conceitos e depois começar a utiliza-los para <b>Adição, Subtração, Divisão e Multiplicação.</b></p>
+
             <p>Aqui estão os tipos de números que devemos entender:</p>
-            <p><b>Números Naturais e Números Inteiros.</b>, porém, iremos dar enfâse apenas nos mais importantes, que serão os <b>Números Naturais</b> e <b>Números Inteiros</b></p>
-            
+            <p><b>Números Naturais e Números Inteiros.</b>, porém, iremos dar enfâse apenas nos mais importantes, que serão os <b>Números Naturais</b>.</b></p>
+
             <h2>Números Naturais</h2>
 
             <p>Os <b>Números Naturais</b> são aqueles que usamos todos os dias para contar coisas.
-            São os números que começam do <b>zero</b> e vão para frente: 0, 1, 2, 3, 4, 5... e assim por diante, sem parar!</p>
+                São os números que começam do <b>zero</b> e vão para frente: 0, 1, 2, 3, 4, 5... e assim por diante, sem parar!</p>
+
+            <div class="exemplo">
+                <p><b>Exemplo 1</b></p>
+                <p>Temos <b>1 maçã</b> para comer mais tarde, porém seu amigo te deu de presente mais <b>1 maçã</b>, quantas maçã você tem agora?</p>
+                <div class="imagens-centralizadas">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/mais.jpg" width="70px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/igual.jpg" width="70px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                </div>
+            </div>
+
+            <ul>    
+                <li>Se você tem <b>uma maçã</b>, isso é o número 1.</li>
+                <li>Se você ganha mais <b>uma maçã,</b> agora você tem <b>duas maçãs,</b> ou seja, o número 2.</li>
+            </ul>
+
+            <h3>Números inteiros</h3>
+
+            <p>Já os <b>Números Inteiros</b> são como uma régua mágica que vai para os dois lados: </p>
 
             <ul>
-                <li>Se você tem <b>uma maça</b>, isso é o número 1.</li>
-                <li>Se você ganha mais <b>uma maça,</b> agora você tem <b>duas maças,</b> ou seja, o número 2.</li>
+                <li>De um lado, temos os números que você já conhece para contar (0, 1, 2, 3, 4...) que são os <b>Números Naturais.</b> </li>
+                <li>Do outro lado, existem os <b>números negativos:</b> -1, -2, -3, -4... Eles são como "dívidas" ou quando a gente "perde alguma coisa".</li>
+                <li>Dessa maneira, pode se dizer que os números inteiros são ...-4, -3, -2, -1, 0, 1, 2, 3, 4..., ou seja, é mesclado com os números naturais.</li>
             </ul>
-            
-            <h3>Números inteiros</h3>
-            
-            <p>Já os <b>Números Inteiros</b> são como uma régua mágica que vai para os dois lados: </p>
-            
-            <ul>
-               <li>De um lado, temos os números que você ja conhece para contar: 0, 1, 2, 3, 4... que são os <b>Números Naturais.</b> </li>
-               <li>Do outro lado, existem os <b>números negativos:</b> -1, -2, -3, -4... Eles são como "dívidas" ou quando a gente "perde alguma coisa"</li>
-               <li>Dessa maneira, pode se dizer que os números inteiros são ...-4, -3, -2, -1, 0, 1, 2, 3, 4..., ou seja, é mesclado com os números naturais.</li>
+
+            <div class="exemplo">
+                <p><b>Exemplo 2</b></p>
+                <p>Temos <b>2 maçãs</b> guardadas para comer mais tarde, porém seu amigo está com fome e pediu para comer <b>1 maçã</b>, quantas Maçãs você tem guardadas? </p>
+                <div class="imagens-centralizadas">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/menos.png" width="70px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                    <img src="/assets/imagens/igual.jpg" width="70px">
+                    <img src="/assets/imagens/maca.jpg" width ="100px">
+                </div>
+
+                <ul>    
+                <li>Se você tem <b>Duas Maçãs</b>, isso é o número 2.</li>
+                <li>Você foi gentil e deu <b>uma Maçã</b> ao seu amigo, agora você tem somente <b>uma Maçã</b> ou seja, o número 1.</li>
             </ul>
+            </div>
 
             <h4>Exercícios</h4>
-            
+
             <div class="exercicio">
                 <p>Qual o <b>menor número</b>? -5 ou 4? </p>
                 <input id="resposta" type="text">
@@ -76,7 +107,7 @@
                 <button id="botao1">Responder</button>
                 <p id="resultado1"></p>
             </div>
-            
+
             <div class="exercicio">
                 <p>Seguindo a régua de <b>negativos para positivos</b>, qual o número que vem depois do -1?</p>
                 <input id="resposta2" type="text">
@@ -128,6 +159,55 @@
         </script>
     </div>
 
+    <!--botão WIDGET calculadora-->
+    <div class="calculadora-widget">
+        <button class="botao-calculadora-widget" onclick="abrirCalculadora()" title="Abrir Calculadora">
+            <i class="fas fa-calculator"></i>
+        </button>
+    </div>
+
+    <!--overlay pop up calculadora-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">,</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script da Calculadora Popup -->
+    <script src="/js/calculadora-popup.js"></script>
+
     <!-- footer responsivo -->
     <footer class="footer-bg">
         <div class="footer">
@@ -141,7 +221,7 @@
                 <a href="https://www.facebook.com/profile.php?id=935689466548516&_rdr" class="footer-link" target="_blank" id="Facebook">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-            </div>             
+            </div>
         </div>
     </footer>
 </body>

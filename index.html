@@ -29,7 +29,7 @@
         </div>
     </header>
 
-    <!--conteúdo da pag inicial-->
+    <!--conteudo da pag inicial-->
     <main class="introducao-bg">
         <div class="introducao">
             <div class="introducao-conteudo">
@@ -56,6 +56,55 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
+    <!--botão WIDGET calculadora-->
+    <div class="calculadora-widget">
+        <button class="botao-calculadora-widget" onclick="abrirCalculadora()" title="Abrir Calculadora">
+            <i class="fas fa-calculator"></i>
+        </button>
+    </div>
+
+    <!--overlay pop up calculadora-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+            
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">.</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script da Calculadora popup-->
+    <script src="./js/calculadora-popup.js"></script>
+
     <!--lista dropdown-->
     <section id="objetivos">
         <h1>Objetivos</h1>
@@ -77,7 +126,7 @@
         </details>
     </section>
 
-    <!-- footer responsivo -->
+    <!--footer responsivo-->
     <footer class="footer-bg">
         <div class="footer">
             <div class="footer-logo">

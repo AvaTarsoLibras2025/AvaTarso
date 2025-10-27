@@ -1,24 +1,25 @@
-//estado da calculadora
+//estado da calculadora principal
 let currentInput = '0';
 let previousInput = '';
 let operation = null;
 let shouldResetDisplay = false;
 
-//elemento do display
+//display principal
 const display = document.getElementById('display');
 
-//atualiza display
+//atualiza display principal
 function updateDisplay() {
-    display.value = currentInput;
+    if (display) {
+        display.value = currentInput;
+    }
 }
 
-//adicionando numero
+//funcoes da calculadora principal
 function addNumber(num) {
     if (currentInput === '0' || shouldResetDisplay) {
         currentInput = num;
         shouldResetDisplay = false;
     } else {
-        //tamanho máximo do display
         if (currentInput.length < 12) {
             currentInput += num;
         }
@@ -26,18 +27,16 @@ function addNumber(num) {
     updateDisplay();
 }
 
-//adicionando ponto decimal
 function addDecimal() {
     if (shouldResetDisplay) {
-        currentInput = '0.';
+        currentInput = '0,';
         shouldResetDisplay = false;
     } else if (!currentInput.includes('.')) {
-        currentInput += '.';
+        currentInput += ',';
     }
     updateDisplay();
 }
 
-//definindo operação
 function setOperation(op) {
     if (operation !== null && !shouldResetDisplay) {
         calculateResult();
@@ -48,7 +47,6 @@ function setOperation(op) {
     shouldResetDisplay = true;
 }
 
-//calculando resultado
 function calculateResult() {
     if (operation === null || shouldResetDisplay) return;
     
@@ -68,7 +66,6 @@ function calculateResult() {
             break;
         case '/':
             if (current === 0) {
-                // mostra erro no display
                 currentInput = 'Erro: Div/0';
                 operation = null;
                 previousInput = '';
@@ -82,9 +79,7 @@ function calculateResult() {
             return;
     }
     
-    //arredondando resultado
     result = Math.round(result * 100000000) / 100000000;
-    
     currentInput = result.toString();
     operation = null;
     previousInput = '';
@@ -92,7 +87,6 @@ function calculateResult() {
     updateDisplay();
 }
 
-//limpar display
 function clearDisplay() {
     currentInput = '0';
     previousInput = '';
@@ -107,7 +101,7 @@ document.addEventListener('keydown', function(event) {
     
     if (key >= '0' && key <= '9') {
         addNumber(key);
-    } else if (key === '.') {
+    } else if (key === '.' || key===',') {
         addDecimal();
     } else if (key === '+' || key === '-' || key === '*' || key === '/') {
         setOperation(key);
@@ -116,7 +110,6 @@ document.addEventListener('keydown', function(event) {
     } else if (key === 'Escape' || key === 'c' || key === 'C') {
         clearDisplay();
     } else if (key === 'Backspace') {
-        //backspace
         if (currentInput.length > 1) {
             currentInput = currentInput.slice(0, -1);
         } else {
@@ -126,5 +119,5 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-//inicia display
+//inicializa display
 updateDisplay();

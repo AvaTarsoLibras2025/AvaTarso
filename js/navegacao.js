@@ -1,4 +1,4 @@
-//Controle da navegação entre as páginas de matemática
+//controle da navegação nas pags de mat
 function adicionarListener(idBotao, idResposta, idResultado, respostaCorreta) {
   const botao = document.getElementById(idBotao);
   if (botao) {
@@ -11,7 +11,7 @@ function adicionarListener(idBotao, idResposta, idResultado, respostaCorreta) {
   }
 }
 
-// Página de Conjuntos Numéricos
+//pag Conjuntos Numéricos
 adicionarListener("botao", "resposta", "resultado", "-5");
 adicionarListener("botao1", "resposta1", "resultado1", "-2");
 adicionarListener("botao2", "resposta2", "resultado2", "0");
@@ -20,7 +20,7 @@ adicionarListener("botao4", "resposta4", "resultado4", "-6-5-4");
 adicionarListener("botao5", "resposta5", "resultado5", "-12-13-14-15-16");
 
 
-// Página de Adição
+//pag Adição
 adicionarListener("Adicao_botao", "resposta_A0", "resultado_A0", "5");
 adicionarListener("Adicao_botaoA1", "resposta_A1", "resultado_A1", "5");
 adicionarListener("Adicao_botaoA2", "resposta_A2", "resultado_A2", "15");
@@ -34,7 +34,7 @@ adicionarListener("Adicao_botaoA9", "resposta_A9", "resultado_A9", "1023");
 adicionarListener("Adicao_botaoA10", "resposta_A10", "resultado_A10", "2221");
 adicionarListener("Adicao_botaoA11", "resposta_A11", "resultado_A11", "4023");
 
-//página de subtração
+//pag subtração
 adicionarListener("Subtracao_botao", "resposta_S0", "resultado_S0", "5");
 adicionarListener("Subtracao_botaoS1", "resposta_S1", "resultado_S1", "9");
 adicionarListener("Subtracao_botaoS2", "resposta_S2", "resultado_S2", "12");
@@ -48,7 +48,7 @@ adicionarListener("Subtracao_botaoS9", "resposta_S9", "resultado_S9", "55");
 adicionarListener("Subtracao_botaoS10", "resposta_S10", "resultado_S10", "55");
 adicionarListener("Subtracao_botaoS11", "resposta_S11", "resultado_S11", "-20");
 
-//página de multiplicação
+//pag multiplicação
 adicionarListener("Multi_botaoM0", "resposta_M0", "resultado_M0", "12");
 adicionarListener("Multi_botaoM1", "resposta_M1", "resultado_M1", "18");
 adicionarListener("Multi_botaoM2", "resposta_M2", "resultado_M2", "100");

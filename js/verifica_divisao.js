@@ -1,4 +1,4 @@
-// respostas dos exercícios
+//respostas dos exercícios
 const respostasCorretasDivisao = {
     D0: "4",
     D1: "9",
@@ -13,13 +13,13 @@ const respostasCorretasDivisao = {
     D10: "8"
 };
 
-// verifica resposta
+//verifica resposta
 function verificarRespostaDivisao(idInput, idBotao, idResultado, respostaCorreta) {
     const botao = document.getElementById(idBotao);
     const input = document.getElementById(idInput);
     const resultado = document.getElementById(idResultado);
     
-    // verifica se elementos existem
+    //confere se elementos existem
     if (botao && input && resultado) {
         botao.addEventListener('click', function() {
             if (input.value.trim() === respostaCorreta) {
@@ -35,12 +35,12 @@ function verificarRespostaDivisao(idInput, idBotao, idResultado, respostaCorreta
     }
 }
 
-// configura exercícios
+//configura exercícios
 document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i <= 10; i++) {
         const id = `D${i}`;
         
-        // id diferente para primeiro exercício
+        //id diferente para primeiro exercício
         const idBotao = id === 'D0' ? 'Divisao_botao' : `Divisao_botao${id}`;
         
         verificarRespostaDivisao(

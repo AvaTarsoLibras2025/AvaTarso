@@ -29,6 +29,56 @@
         </div>
     </header>
 
+    <!--botão WIDGET calculadora-->
+    <div class="calculadora-widget">
+        <button class="botao-calculadora-widget" onclick="abrirCalculadora()" title="Abrir Calculadora">
+            <i class="fas fa-calculator"></i>
+        </button>
+    </div>
+
+    <!--overlay pop up calculadora-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+            
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">,</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script do popup calculadora-->
+    <script src="/js/calculadora-popup.js"></script>
+
+    <!--conteúdo da página-->
     <div class="fundo-branco">
         <div class="titulo-centralizado">
             <h1>Subtração</h1>
@@ -36,14 +86,14 @@
         </div>
 
         <div class="conteudo-centralizado">
-            <p>Subtração é quando a gente tira alguma coisa. É o contrário da adição (soma). Como por exemplo, <b>5 - 3 = 2.</b></p>
+            <p>Subtração é quando "tiramos" objetos de um grupo. É o contrário da adição (soma). Como por exemplo, <b>5 - 3 = 2.</b></p>
             
             <h2>Exemplos</h2>
             <hr>
 
             <div class="exemplo">
-                <p><b>Exemplo 1</b></p>
-                <p>Você tem <b>R$10,00</b>, você decide comprar um sorvete por <b>R$4,00</b>. Quanto dinheiro sobra para você?</p>
+                <p><b>Exemplo 6</b></p>
+                <p>Você tem <b>R$10,00</b>, decide comprar um sorvete por <b>R$4,00</b>. Quanto dinheiro sobra?</p>
                 <div class="imagens-centralizadas">
                     <img src="/assets/imagens/10 reais.jpg" width="200px">
                     <img src="/assets/imagens/menos.png" width="50px" height="120px">
@@ -58,8 +108,8 @@
             </div>
 
             <div class="exemplo">
-                <p><b>Exemplo 2</b></p>
-                <p>Você tem <b>R$20,00</b> e compra um caderno de <b>R$7,00</b>. Quanto você ainda tem?</p>
+                <p><b>Exemplo 7</b></p>
+                <p>Você tem <b>R$20,00</b> e compra um caderno de <b>R$7,00</b>. Quanto restou?</p>
                 <div class="imagens-centralizadas">
                     <img src="/assets/imagens/20 reais.jpg" width="200px">
                     <img src="/assets/imagens/menos.png" width="50px" height="120px">
@@ -76,8 +126,8 @@
             </div>
 
             <div class="exemplo">
-                <p><b>Exemplo 3</b></p>
-                <p>Você tem uma nota de <b>R$200,00</b>, decide comprar uma blusa de <b>R$80,00</b>. Quanto sobra para você?</p>
+                <p><b>Exemplo 8</b></p>
+                <p>Você tem uma nota de <b>R$200,00</b>, decide comprar uma blusa de <b>R$80,00</b>. Quanto sobra?</p>
                 <div class="imagens-centralizadas">
                     <img src="/assets/imagens/200 reais.jpg" width="200px">
                     <img src="/assets/imagens/menos.png" width="50px" height="120px">
@@ -92,7 +142,7 @@
             </div>
 
             <h4>Exercícios</h4>
-            <p><b>Responda abaixo o resultado das subtrações</b></p>
+            <p><b>Responda abaixo o resultado das subtrações: </b></p>
             
             <div class="exercicio">
                 <p>10 - 5</p>
@@ -178,13 +228,13 @@
                 <p id="resultado_S11"></p>
             </div>
 
-            <!-- Botão para próximo módulo -->
+            <!--botão próx modulo-->
             <div class="proximo-modulo">
                 <a href="multiplicacao.html" class="botao-proximo">Próximo Módulo: Multiplicação →</a>
             </div>
         </div>
 
-        <!--verifica os exercícios-->
+        <!--verificando os exercícios-->
         <script src="/js/verifica_subtracao.js"></script>
 
         <!--VLibras widget-->
@@ -202,7 +252,7 @@
         </script>
     </div>
 
-    <!-- footer responsivo -->
+    <!--footer responsivo-->
     <footer class="footer-bg">
         <div class="footer">
             <div class="footer-logo">

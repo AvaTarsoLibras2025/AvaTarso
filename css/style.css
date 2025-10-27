@@ -1,22 +1,22 @@
 /*ESTILOS PRINCIPAIS DO SITE*/
-/*cabeçalho*/
 
-body{
+/*CABEÇALHO*/
+body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-ul{
+ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.header-bg{
+.header-bg {
     background-color: #FF6B35;   
 }
 
@@ -36,6 +36,7 @@ a{
     width: auto; 
     border-radius: 5px;
 }
+
 .header-menu {
     display: flex;
     flex-wrap: wrap;
@@ -46,11 +47,11 @@ a{
     padding: 0;
 }
 
-.header-menu li{
+.header-menu li {
     margin-left: 20px;
 }
 
-.header-menu a{
+.header-menu a {
     padding: 16px 0px;
     display: inline-block;
     color: #ffffff;
@@ -102,40 +103,43 @@ a{
 }
 
 /*estilização para mobile*/
-
-@media(max-width: 800px){
-    .header-menu{
+@media (max-width: 800px) {
+    .header-menu {
         gap: 20px;
     }
-    .header-menu a{
+    
+    .header-menu a {
         background: #1111;
         padding: 12px 16px;
         border-radius: 4px;
     }
-    .header-menu a:hover{
+    
+    .header-menu a:hover {
         background-color: #ffffff;
     }
 }
-@media(max-width: 600px){
-    .header-menu{
+
+@media (max-width: 600px) {
+    .header-menu {
         gap: 12px; 
     }
-    .header-menu a{
+    
+    .header-menu a {
         padding: 8px 12px;
         font-size: 14px;
     }
 }
 
 /*conteúdo da página principal*/
-
-.introducao-bg{
+.introducao-bg {
     background: #ffffff;
 }
-h1, ul, p{
+
+h1, ul, p {
     margin: 0px;
 }
 
-.introducao{
+.introducao {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0px 40px;
@@ -148,30 +152,29 @@ h1, ul, p{
     margin-top: 60px;
 }
 
-.introducao-conteudo{
+.introducao-conteudo {
     align-self: end;
     padding-bottom: 80px;
 }
 
-.introducao h1{
+.introducao h1 {
     margin-bottom: 32px;
     font-size: 64px;
     line-height: 1.125;
 }
 
-.introducao p{
+.introducao p {
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 1.5;
     color: #B2B2B2;
 }
 
-.introducao img{
+.introducao img {
     border-radius: 20px;
 }
 
-
-/*footer*/
+/*FOOTER*/
 .footer-bg {
     background-color: #FF6B35; 
     padding: 20px 0;
@@ -195,7 +198,7 @@ h1, ul, p{
     border-radius: 5px; 
 }
 
-/*redes Sociais a direita*/
+/*redes socias a direita*/
 .footer-social-media {
     display: flex;
     gap: 15px;
@@ -237,8 +240,7 @@ h1, ul, p{
     }
 }
 
-/*section OBJETIVOS*/
-
+/*OBJETIVOS*/
 section {
     max-width: 1200px;
     margin: 60px auto 0 auto;
@@ -275,7 +277,7 @@ section summary {
     position: relative;
 }
 
-/* remove a seta padrão do details */
+/*remove a seta padrão do details*/
 section summary::-webkit-details-marker {
     display: none;
 }
@@ -339,7 +341,7 @@ section p {
     }
 }
 
-/*estilos página sobre*/
+/*PÁGINAS SOBRE*/
 .sobre-bg {
     max-width: 1200px;
     margin: 0 auto;
@@ -423,5 +425,267 @@ section p {
     .sobre-esquerda .sobre-imagem,
     .sobre-direita .sobre-imagem {
         order: 0;
+    }
+}
+
+/* ESTILOS DA CALCULADORAS*/
+
+/*página Calculadora*/
+.calculator {
+    display: inline-block;
+    padding: 30px;
+    background-color: #ff6b35;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+    flex: 1;
+}
+
+#display {
+    width: 270px;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    width: 65px;
+    height: 65px;
+    font-size: 24px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*botão widget calculadora*/
+.calculadora-widget {
+    position: fixed;
+    bottom: 400px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.botao-calculadora-widget {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.botao-calculadora-widget:hover {
+    background-color: #e55a2b;
+    transform: scale(1.1);
+}
+
+.botao-calculadora-widget i {
+    font-size: 20px;
+    color: white;
+}
+
+/*overlay da calculadora c janela centralizada*/
+.overlay-calculadora {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.popup-calculadora {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    max-width: 90%;
+}
+
+.calculadora-popup {
+    width: 100%;
+}
+
+/*estilos da calculadora no overlay central*/
+.calculadora-popup #display-popup {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linha-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.linha-botoes .button {
+    flex: 1;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.linha-botoes .button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.linha-botoes .button:active {
+    transform: translateY(0);
+}
+
+/*plugin VLIBRAS*/
+div[vw] {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/*responsividade calculadoras*/
+@media (max-width: 600px) {
+    /* Calculadora Principal */
+    .calculator {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    #display {
+        width: 240px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .button {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+        margin: 4px;
+    }
+    
+    /*calculadora Popup*/
+    .popup-calculadora {
+        padding: 20px;
+        width: 300px;
+    }
+    
+    .calculadora-popup #display-popup {
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .linha-botoes .button {
+        height: 50px;
+        font-size: 18px;
+    }
+    
+    /*botão Widget*/
+    .calculadora-widget {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .botao-calculadora-widget {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .botao-calculadora-widget i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    /*calculadora principal*/
+    .calculator {
+        padding: 15px;
+    }
+    
+    #display {
+        width: 200px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        margin: 3px;
+    }
+    
+    /*calculadora Popup */
+    .popup-calculadora {
+        padding: 15px;
+        width: 280px;
+    }
+    
+    .calculadora-popup #display-popup {
+        height: 45px;
+        font-size: 20px;
+        padding: 0 10px;
+    }
+    
+    .linha-botoes .button {
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    .botoes-calculadora {
+        gap: 8px;
+    }
+    
+    .linha-botoes {
+        gap: 8px;
     }
 }

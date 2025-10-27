@@ -29,6 +29,7 @@
         </div>
     </header>
 
+    <!--CONTEÚDO DA PÁGINA-->
     <div class="fundo-branco">
         <div class="titulo-centralizado">
             <h1>Multiplicação</h1>
@@ -42,8 +43,8 @@
             <hr>
 
             <div class="exemplo">
-                <p><b>Exemplo 1</b></p>
-                <p>Imagina que você está montando pacotes de brinquedos. <b>Cada pacote tem 4 brinquedos</b>, e você fez <b>3 pacotes</b>. Quantos brinquedos tem no total?</p>
+                <p><b>Exemplo 9</b></p>
+                <p>Imagine que você está montando pacotes de brinquedos. <b>Cada pacote tem 4 brinquedos</b>, e você fez <b>3 pacotes</b>. Quantos brinquedos tem no total?</p>
                 <div class="imagens-centralizadas">
                     <img src="/assets/imagens/pacote.jpg" width="200px">
                     <img src="/assets/imagens/mais.jpg" width="70px" height="60px">
@@ -57,8 +58,8 @@
             </div>
 
             <div class="exemplo">
-                <p><b>Exemplo 2</b></p>
-                <p>Raramente podemos usar o sinal de <b>adição</b> para fazer multiplicações, porque pode ser dificil dependendo de quantos termos devemos multiplicar, então vamos usar com o sinal de <b>"x"</b> para facilitar.</p>
+                <p><b>Exemplo 10</b></p>
+                <p>Raramente podemos usar o sinal de <b>adição</b> para fazer multiplicações, porque pode ser difícil dependendo de quantos objetos devemos multiplicar, então vamos usar com o sinal de <b>"x"</b> para facilitar.</p>
                 <p>Em uma fazenda, cada galinheiro tem 6 galinhas. O fazendeiro tem 3 galinheiros. Quantas galinhas ele tem no total?</p>
                 <div class="imagens-centralizadas">
                     <img src="/assets/imagens/galinha.png" width="150px">
@@ -67,13 +68,13 @@
                     <img src="/assets/imagens/igual.jpg" width="100px">
                     <img src="/assets/imagens/galinha18.png" width="150px">
                 </div>
-                <p>O fazendeiro tem <b>18 galinhas</b> no total!, porque <b>6 galinhas x 3 galinheiros é igual 18</b>!, ou seja, <b>6 x 3 = 18</b>!</p>
+                <p>O fazendeiro tem <b>18 galinhas</b> no total pois: <b>6 galinhas x 3 galinheiros é igual 18</b>! Ou seja, <b>6 x 3 = 18</b>!</p>
             </div>
 
             <div class="exemplo">
-                <p><b>Exemplo 3</b></p>
+                <p><b>Exemplo 11</b></p>
                 <p>Agora vamos dificultar mais um pouquinho, fazendo multiplicação de <b>3 números</b>.</p>
-                <p>Imagina que você tem <b>3 caixas</b>. Dentro de cada caixa, tem <b>3 saquinhos</b>. E em cada saquinho, tem <b>3 balas</b>, quantas balas você terá ao todo?</p>
+                <p>Imagina que você tem <b>3 caixas</b>. Dentro de cada caixa, tem <b>3 saquinhos</b>. Em cada saquinho, tem <b>3 balas</b>, quantas balas você terá no total?</p>
                 
                 <div class="imagens-centralizadas">
                     <p><b>3 caixas</b></p>
@@ -205,7 +206,6 @@
             </div>
         </div>
 
-        <!--javascript pra conferir se os exercícios estão corretos-->
         <!--verifica os exercícios-->
         <script src="/js/verifica_multiplicacao.js"></script>
 
@@ -223,6 +223,55 @@
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
     </div>
+
+    <!--botão WIDGET calculadora-->
+    <div class="calculadora-widget">
+        <button class="botao-calculadora-widget" onclick="abrirCalculadora()" title="Abrir Calculadora">
+            <i class="fas fa-calculator"></i>
+        </button>
+    </div>
+
+    <!--overlay pop up calculadora-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+            
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">,</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script da Calculadora Popup -->
+    <script src="/js/calculadora-popup.js"></script>
 
     <!-- footer responsivo -->
     <footer class="footer-bg">

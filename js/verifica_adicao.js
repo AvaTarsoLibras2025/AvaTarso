@@ -1,4 +1,4 @@
-// corrigindo exercícios de Adição
+//corrigindo exercícios de soma
 const respostasCorretasAdicao = {
     A0: "5",
     A1: "5", 
@@ -14,13 +14,13 @@ const respostasCorretasAdicao = {
     A11: "4023"
 };
 
-// verifica respostas
+//verifica respostas
 function verificarRespostaAdicao(idInput, idBotao, idResultado, respostaCorreta) {
     const botao = document.getElementById(idBotao);
     const input = document.getElementById(idInput);
     const resultado = document.getElementById(idResultado);
     
-    // confere se tds elementos existem
+    //confere se tds elementos existem
     if (botao && input && resultado) {
         botao.addEventListener('click', function() {
             if (input.value.trim() === respostaCorreta) {
@@ -36,12 +36,12 @@ function verificarRespostaAdicao(idInput, idBotao, idResultado, respostaCorreta)
     }
 }
 
-// configura o DOM
+//configura o DOM
 document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i <= 11; i++) {
         const id = `A${i}`;
         
-        // o botão do exercício A0 é diferente
+        //botão do exercício A0 é diferente
         const idBotao = id === 'A0' ? 'Adicao_botao' : `Adicao_botao${id}`;
         
         verificarRespostaAdicao(

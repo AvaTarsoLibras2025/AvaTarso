@@ -92,7 +92,7 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer existente */
+/*footer*/
 .footer-bg {
     background-color: #2c3e50;
     padding: 20px 0;
@@ -125,4 +125,110 @@ div[vw] {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+}
+
+/*overlay CALCULADORA pra centralizar janela*/
+.overlay-calculadora {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.popup-calculadora {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    max-width: 90%;
+}
+
+.calculadora-popup {
+    width: 100%;
+}
+
+/*botão de Widget da Calculadora*/
+.calculadora-widget {
+    position: fixed;
+    bottom: 400px;
+    left: 20px; 
+    z-index: 1000;
+}
+
+.botao-calculadora-widget {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.botao-calculadora-widget:hover {
+    background-color: #e55a2b;
+    transform: scale(1.1);
+}
+
+.botao-calculadora-widget i {
+    font-size: 20px;
+    color: white;
+}
+
+/*estilos p calculadora no overlay central*/
+.calculadora-popup #display-popup {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-sizing: border-box;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-calculadora {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linha-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.linha-botoes .button {
+    flex: 1;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.linha-botoes .button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.linha-botoes .button:active {
+    transform: translateY(0);
 }

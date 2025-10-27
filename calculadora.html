@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="./css/calculadora.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8" />
     <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/calculadora.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <!--cabeçalho-->
@@ -21,16 +21,17 @@
                     <li><a href="/index.html">Página Inicial</a></li>
                     <li><a href="./calculadora.html">Calculadora</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
-                    <li class="botao-aprender"><a href="./paginas_matematica/decimal_naturais.html">Aprender</a></li>
+                    <li class="botao-aprender">
+                        <a href="./paginas_matematica/decimal_naturais.html">Aprender</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
-    <div class = "calculator">
+    <!--CALCULADORA PRINCIPAL-->
+    <div class="calculator">
         <input type="text" id="display" disabled>
-    
         <br>
         <button class="button" onclick="addNumber('7')">7</button>
         <button class="button" onclick="addNumber('8')">8</button>
@@ -40,7 +41,7 @@
         <button class="button" onclick="addNumber('4')">4</button>
         <button class="button" onclick="addNumber('5')">5</button>
         <button class="button" onclick="addNumber('6')">6</button>
-        <button class="button" onclick="setOperation('*')">x</button>
+        <button class="button" onclick="setOperation('*')">×</button>
         <br>
         <button class="button" onclick="addNumber('1')">1</button>
         <button class="button" onclick="addNumber('2')">2</button>
@@ -48,28 +49,67 @@
         <button class="button" onclick="setOperation('-')">-</button>
         <br>
         <button class="button" onclick="addNumber('0')">0</button>
-        <button class="button" onclick="addNumber('.')">.</button>
+        <button class="button" onclick="addDecimal()">.</button>
         <button class="button" onclick="calculateResult()">=</button>
         <button class="button" onclick="setOperation('+')">+</button>
         <br><br>
         <button class="button" onclick="clearDisplay()">C</button>
-        <script src="./js/calculadora.js"></script>
     </div>
-    
-    <!--plugin vlibras-->
-    <!--VLibras widget-->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
+
+    <!--overlay p todas as páginas-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">,</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!--script vlibras via cdn-->
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
+    <!--script da Calculadora PRINCIPAL-->
+    <script src="./js/calculadora-principal.js"></script>
+
+    <!--plugin vlibras-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 
     <!-- footer responsivo -->
     <footer class="footer-bg">
@@ -84,7 +124,7 @@
                 <a href="https://www.facebook.com/profile.php?id=935689466548516&_rdr" class="footer-link" target="_blank" id="Facebook">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-            </div>             
+            </div>
         </div>
     </footer>
 </body>

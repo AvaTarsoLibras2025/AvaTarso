@@ -1,4 +1,4 @@
-// respostas dos exercícios
+//respostas dos exercícios de subtação
 const respostasCorretasSubtracao = {
     S0: "5",
     S1: "9",
@@ -14,13 +14,13 @@ const respostasCorretasSubtracao = {
     S11: "-20"
 };
 
-// verifica resposta
+//corrige resposta
 function verificarRespostaSubtracao(idInput, idBotao, idResultado, respostaCorreta) {
     const botao = document.getElementById(idBotao);
     const input = document.getElementById(idInput);
     const resultado = document.getElementById(idResultado);
     
-    // verifica se elementos existem
+    //verifica se elementos existem
     if (botao && input && resultado) {
         botao.addEventListener('click', function() {
             if (input.value.trim() === respostaCorreta) {
@@ -36,12 +36,12 @@ function verificarRespostaSubtracao(idInput, idBotao, idResultado, respostaCorre
     }
 }
 
-// configura exercícios
+//configura exercícios
 document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i <= 11; i++) {
         const id = `S${i}`;
         
-        // id diferente para primeiro exercício
+        // id diferente
         const idBotao = id === 'S0' ? 'Subtracao_botao' : `Subtracao_botao${id}`;
         
         verificarRespostaSubtracao(

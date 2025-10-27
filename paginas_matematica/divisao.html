@@ -29,6 +29,7 @@
         </div>
     </header>
 
+    <!--conteúdo da página-->
     <div class="fundo-branco">
         <div class="titulo-centralizado">
             <h1>Divisão</h1>
@@ -42,20 +43,20 @@
             <hr>
 
             <div class="exemplo">
-                <p><b>Exemplo 1</b></p>
+                <p><b>Exemplo 12</b></p>
                 <p>A Ana fez <b>12 bolinhos</b> e quer dividir igualmente entre <b>3 amigos</b>. Quantos bolinhos cada um vai ganhar?</p>
                 <div class="imagens-centralizadas">
-                <img src="/assets/imagens/bolinhos.png" width="400px">
-                <img src="/assets/imagens/igual.jpg" width="90px">
-                <img src="/assets/imagens/criancas.png" width="400px">
-
+                    <img src="/assets/imagens/bolinhos.png" width="400px">
+                    <img src="/assets/imagens/igual.jpg" width="90px">
+                    <img src="/assets/imagens/criancas.png" width="400px">
+                </div>
                 <br>
                 <br>
                 <p>Cada um vai receber <b>4 bolinhos!</b></p>
                 
                 <br>
                 <br>
-                <p><b>Exemplo 2</b></p>
+                <p><b>Exemplo 13</b></p>
                 <p>A maneira mais facil de se dividir, quando não possui uma calculadora, é escrever a estrutura no papel.</p>
                 <br>
                 <img src="/assets/imagens/divisaoo.png">
@@ -68,9 +69,11 @@
                 <p><b>5) </b>12 - 12 é igual a 0, então nosso resto é igual a 0!</p>
                 <br>
                 <p><b>O resultado final dessa divisão é 4.</b></p>
-                <h4>Exercícios</h4>
-                <p><b>Responda abaixo o resultado das divisões</b></p>
             </div>
+
+            <h4>Exercícios</h4>
+            <p><b>Responda abaixo o resultado das divisões</b></p>
+            
             <div class="exercicio">
                 <p>12 ÷ 3</p>
                 <input id="resposta_D0" type="text">
@@ -148,7 +151,7 @@
                 <p id="resultado_D10"></p>
             </div>
 
-            <!-- Botão para voltar ao início -->
+            <!--botão p voltar ao início -->
             <div class="proximo-modulo">
                 <a href="/paginas_matematica/decimal_naturais.html" class="botao-proximo">Voltar ao Início dos Módulos</a>
             </div>
@@ -172,7 +175,56 @@
         </script>
     </div>
 
-    <!-- footer responsivo -->
+    <!--botão WIDGET calculadora-->
+    <div class="calculadora-widget">
+        <button class="botao-calculadora-widget" onclick="abrirCalculadora()" title="Abrir Calculadora">
+            <i class="fas fa-calculator"></i>
+        </button>
+    </div>
+
+    <!--overlay pop up calculadora-->
+    <div id="overlay-calculadora" class="overlay-calculadora">
+        <div class="popup-calculadora">
+            <div class="calculadora-popup">
+                <input type="text" id="display-popup" disabled>
+            
+                <div class="botoes-calculadora">
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('7')">7</button>
+                        <button class="button" onclick="addNumberPopup('8')">8</button>
+                        <button class="button" onclick="addNumberPopup('9')">9</button>
+                        <button class="button" onclick="setOperationPopup('/')">÷</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('4')">4</button>
+                        <button class="button" onclick="addNumberPopup('5')">5</button>
+                        <button class="button" onclick="addNumberPopup('6')">6</button>
+                        <button class="button" onclick="setOperationPopup('*')">×</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('1')">1</button>
+                        <button class="button" onclick="addNumberPopup('2')">2</button>
+                        <button class="button" onclick="addNumberPopup('3')">3</button>
+                        <button class="button" onclick="setOperationPopup('-')">-</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="addNumberPopup('0')">0</button>
+                        <button class="button" onclick="addDecimalPopup()">,</button>
+                        <button class="button" onclick="calculateResultPopup()">=</button>
+                        <button class="button" onclick="setOperationPopup('+')">+</button>
+                    </div>
+                    <div class="linha-botoes">
+                        <button class="button" onclick="clearDisplayPopup()" style="width: 100%;">C</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script do popup da calculadora-->
+    <script src="/js/calculadora-popup.js"></script>
+
+    <!--footer-->
     <footer class="footer-bg">
         <div class="footer">
             <div class="footer-logo">
