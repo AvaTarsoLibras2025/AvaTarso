@@ -45,8 +45,21 @@ document.addEventListener('click', function(event) {
 //atualizando display popup
 function updateDisplayPopup() {
     if (displayPopup) {
-        displayPopup.value = currentInputPopup;
+        displayPopup.value = formatNumberWithSeparators(currentInputPopup);
     }
+}
+
+function formatNumberWithSeparators(numberString) {
+    const parts = numberString.split(',');
+    let integerPart = parts[0];
+    const decimalPart = parts[1] || '';
+    
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    
+    if (decimalPart) {
+        return integerPart + ',' + decimalPart;
+    }
+    return integerPart;
 }
 
 //OPERAÇÕES E FUNÇÕES da calculadora popup
@@ -55,7 +68,7 @@ function addNumberPopup(num) {
         currentInputPopup = num;
         shouldResetDisplayPopup = false;
     } else {
-        if (currentInputPopup.length < 12) {
+        if (currentInputPopup.replace(/\./g, '').length < 12) {
             currentInputPopup += num;
         }
     }
@@ -66,7 +79,7 @@ function addDecimalPopup() {
     if (shouldResetDisplayPopup) {
         currentInputPopup = '0,';
         shouldResetDisplayPopup = false;
-    } else if (!currentInputPopup.includes('.')) {
+    } else if (!currentInputPopup.includes(',')) {
         currentInputPopup += ',';
     }
     updateDisplayPopup();
@@ -77,7 +90,7 @@ function setOperationPopup(op) {
         calculateResultPopup();
     }
     
-    previousInputPopup = currentInputPopup;
+    previousInputPopup = currentInputPopup.replace(/\./g, '');
     operationPopup = op;
     shouldResetDisplayPopup = true;
 }
@@ -85,8 +98,8 @@ function setOperationPopup(op) {
 function calculateResultPopup() {
     if (operationPopup === null || shouldResetDisplayPopup) return;
     
-    const prev = parseFloat(previousInputPopup);
-    const current = parseFloat(currentInputPopup);
+    const prev = parseFloat(previousInputPopup.replace(',', '.'));
+    const current = parseFloat(currentInputPopup.replace(/\./g, '').replace(',', '.'));
     let result;
     
     switch (operationPopup) {
@@ -115,7 +128,7 @@ function calculateResultPopup() {
     }
     
     result = Math.round(result * 100000000) / 100000000;
-    currentInputPopup = result.toString();
+    currentInputPopup = result.toString().replace('.', ',');
     operationPopup = null;
     previousInputPopup = '';
     shouldResetDisplayPopup = true;

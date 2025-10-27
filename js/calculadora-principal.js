@@ -10,8 +10,21 @@ const display = document.getElementById('display');
 //atualiza display principal
 function updateDisplay() {
     if (display) {
-        display.value = currentInput;
+        display.value = formatNumberWithSeparators(currentInput);
     }
+}
+
+function formatNumberWithSeparators(numberString) {
+    const parts = numberString.split(',');
+    let integerPart = parts[0];
+    const decimalPart = parts[1] || '';
+    
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    
+    if (decimalPart) {
+        return integerPart + ',' + decimalPart;
+    }
+    return integerPart;
 }
 
 //funcoes da calculadora principal
@@ -20,7 +33,7 @@ function addNumber(num) {
         currentInput = num;
         shouldResetDisplay = false;
     } else {
-        if (currentInput.length < 12) {
+        if (currentInput.replace(/\./g, '').length < 12) {
             currentInput += num;
         }
     }
@@ -31,7 +44,7 @@ function addDecimal() {
     if (shouldResetDisplay) {
         currentInput = '0,';
         shouldResetDisplay = false;
-    } else if (!currentInput.includes('.')) {
+    } else if (!currentInput.includes(',')) {
         currentInput += ',';
     }
     updateDisplay();
@@ -42,7 +55,7 @@ function setOperation(op) {
         calculateResult();
     }
     
-    previousInput = currentInput;
+    previousInput = currentInput.replace(/\./g, '');
     operation = op;
     shouldResetDisplay = true;
 }
@@ -50,8 +63,8 @@ function setOperation(op) {
 function calculateResult() {
     if (operation === null || shouldResetDisplay) return;
     
-    const prev = parseFloat(previousInput);
-    const current = parseFloat(currentInput);
+    const prev = parseFloat(previousInput.replace(',', '.'));
+    const current = parseFloat(currentInput.replace(/\./g, '').replace(',', '.'));
     let result;
     
     switch (operation) {
@@ -80,7 +93,7 @@ function calculateResult() {
     }
     
     result = Math.round(result * 100000000) / 100000000;
-    currentInput = result.toString();
+    currentInput = result.toString().replace('.', ',');
     operation = null;
     previousInput = '';
     shouldResetDisplay = true;
