@@ -240,6 +240,14 @@ h1, ul, p {
     }
 }
 
+.footer-copy {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    opacity: 0.85;
+}
+
 /*OBJETIVOS*/
 section {
     max-width: 1200px;
